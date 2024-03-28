@@ -1,3 +1,5 @@
+/* CONFIG */
+
 * {
    margin: 0;
    padding: 0;
@@ -10,11 +12,44 @@
 
 body {
    font-size: 1.6rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: red;
 }
+
+/* HEADER */
+
+header {
+   background-color: white;
+   height: 6rem;
+   box-shadow: 0 0.2rem 3rem 0.3rem black;
+}
+
+nav .colors-type {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20rem;
+   list-style: none;
+}
+
+.active {
+   color: aqua;
+}
+
+.color {
+   margin-top: 1.8rem;
+   font-size: 2rem;
+   cursor: pointer;
+}
+
+.color-hover {
+   transition: 0.08s;
+}
+.color-hover:hover {
+   color: aqua;
+}
+
+
+
+/* MAIN */
 
 .page-content {
    display: flex;
@@ -39,8 +74,8 @@ body {
    transform: scale(0.95);
 }
 
-.bg-color-area .color-input {
-   color: red;
+.hide {
+   display: none;
 }
 
 .color-changer {
