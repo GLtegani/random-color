@@ -31,22 +31,25 @@ nav .colors-type {
 }
 
 .active {
-   color: aqua;
+   color: white;
 }
 
 .color {
-   margin-top: 1.8rem;
+   margin-top: 1.4rem;
    font-size: 2rem;
    cursor: pointer;
+   padding: 0.5rem;
+   background-color: aquamarine;
+   border-radius: 0.8rem;
 }
 
 .color-hover {
    transition: 0.08s;
 }
-.color-hover:hover {
-   color: aqua;
-}
 
+.color-hover:hover {
+   color: white;
+}
 
 
 /* MAIN */

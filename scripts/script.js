@@ -28,6 +28,10 @@ normalSection.onclick = () => {
       'brown',
       'chartreuse',
       'crimson',
+      'burlywood',
+      'cyan',
+      'darkseagreen',
+      'khaki',
    ];
 
    let indexOfColorArray = colorArray.map((element, index) => index);
