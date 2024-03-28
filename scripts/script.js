@@ -6,13 +6,11 @@ const hexSection = document.querySelector('.hex-section');
 let randomNumber;
 let currentColor;
 
-
 normalSection.onclick = () => {
    
    btnChange.classList.remove('hide');
    hexSection.classList.remove('active');
    normalSection.classList.add('active');
-   
    
    let colorArray = [
       'indigo',
@@ -29,33 +27,15 @@ normalSection.onclick = () => {
       'aquamarine',
       'brown',
       'chartreuse',
+      'crimson',
    ];
-   
-   let indexOfColorArray = [
-      
-      colorArray.indexOf('indigo'),
-      colorArray.indexOf('red'),
-      colorArray.indexOf('blue'),
-      colorArray.indexOf('purple'),
-      colorArray.indexOf('orange'),
-      colorArray.indexOf('pink'),
-      colorArray.indexOf('gray'),
-      colorArray.indexOf('white'),
-      colorArray.indexOf('yellow'),
-      colorArray.indexOf('green'),
-      colorArray.indexOf('black'),
-      colorArray.indexOf('aquamarine'),
-      colorArray.indexOf('brown'),
-      colorArray.indexOf('chartreuse'),
-      
-   ];
-   
+
+   let indexOfColorArray = colorArray.map((element, index) => index);
    let numberOfColors = colorArray.length;
    
    btnChange.onclick = () => {
    
       randomNumber = Math.round(Math.random() * numberOfColors);
-      
       
       if(randomNumber == indexOfColorArray[randomNumber]) {
          
@@ -64,7 +44,6 @@ normalSection.onclick = () => {
          bgBody.style.backgroundColor = colorArray[randomNumber];
          
       };
-      
       
    };
    
@@ -78,21 +57,21 @@ hexSection.onclick = () => {
    
    const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
    
-   
    btnChange.onclick = () => {
      
       let hexColor = '#';
       
       for(let i = 0; i < 6; i++) {
+
          randomNumber = Math.floor(Math.random() * hex.length);
          hexColor += hex[randomNumber];
+
       };
       
       currentColor = currentColorInput.style.color = hexColor;
       currentColorInput.innerHTML = currentColor;
       bgBody.style.backgroundColor = hexColor;
       
-
    };
 
 };
